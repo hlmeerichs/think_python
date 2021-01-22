@@ -62,7 +62,7 @@ circle(t, 190)
 
 # exercise 5
 def arc(t, r, angle):
-    arc_length = 2 * math.pi * r * angle / 360 # meaning?????
+    arc_length = 2 * math.pi * r * angle / 360 # circumference = only part of the circle
     n = int(arc_length / 3) + 1
     step_length = arc_length / n
     step_angle = angle / n
@@ -73,5 +73,36 @@ def arc(t, r, angle):
 
 arc(t, 90, 90)
 
+# refactoring code: we have accquired an understanding of our problem and can thus use this knowledge to simplify our code
+def polyline(t, n, length, angle):
+    """Draws n line segments with the given length and angle (in degrees) 
+    between them. t is a turtle.""" # this is a docstring!!!!
+    for i in range(n):
+        t.fd(length)
+        t.lt(angle)
+
+def arc_new(t, r, angle):
+    arc_length = 2 * math.pi * r * angle / 360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = float(angle) / n
+    polyline(t,n, step_length, step_angle)
+
+def circle_new(t, r):
+    arc_new(t, r, 360)
+
+circle_new(t, 25)
+arc_new(t,50, 360)
+
 turtle.mainloop()
 
+# encapsulation and generalization:
+# (1) start by writing a small program with no function definitions
+# (2) once you get the program working, identify a coherent piece in 
+#     a function and give it a name
+# (3) generalize the function by adding appropriate parameters
+# (4) repeat steps 1-3 until you have a set of working functions.
+#     Copy and paste working code to avoid retyping (and re-debugging)
+# (5) look for opportunities to improve the program by refactoring. For
+#     example, if you have similiar code in several places, consider
+#     factoring it into an appropriately general function
