@@ -32,6 +32,7 @@ import math
 
 t = turtle.Turtle() # for clean code, define this here and not later
 t.shape("arrow") # -""-
+t.color("red", "orange") # you can color stuff, first is color of line, 2nd is fill
 
 # exercise 1 and 2
 def square(t, length):
@@ -91,7 +92,9 @@ def arc_new(t, r, angle):
 def circle_new(t, r):
     arc_new(t, r, 360)
 
+t.begin_fill()
 circle_new(t, 25)
+t.end_fill()
 arc_new(t,50, 360)
 
 turtle.mainloop()
