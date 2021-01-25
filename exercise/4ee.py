@@ -28,7 +28,7 @@ def arc_leaves(t, r, angle):
     step_angle = float(angle) / n
     polyline(t,n, step_length, step_angle)
 
-for i in range (18): 
+for i in range (12): 
     arc_leaves(t, 100, 90)
     t.left(120)
 
