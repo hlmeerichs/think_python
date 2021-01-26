@@ -1,7 +1,7 @@
 import turtle
 import math
 
-turtle.Turtle().speed(100)
+turtle.Turtle().speed("fastest")
 
 t = turtle.Turtle()
 tt = turtle.Turtle()
@@ -47,7 +47,20 @@ def leave(t, r, angle):
         arc(t, r, angle)
         t.lt(180 - angle)
 
-leave(tt, 200, 30)
+def flower(t, n, r, angle):
+    """Draws a flower using:
+    t: turtle
+    n: n * leaves
+    r: radius of one leave
+    angle: angle of each leave
+    """
+    for i in range(n):
+        leave(t, r, angle)
+        t.lt(360 / n)
 
-# next step build actual flower, also incorporate circle in the middle
+flower(tt, 18, 200, 90)
+
+# next step add circle in the center, figure out overlapping
 turtle.mainloop()
+
+
