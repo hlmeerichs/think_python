@@ -1,10 +1,12 @@
 import turtle
 import math
 
-turtle.Turtle().shape("arrow")
+turtle.Turtle().speed(100)
 
 t = turtle.Turtle()
 tt = turtle.Turtle()
+
+
 
 def polyline(t, n, length, angle):
     """Draws n line segments.
@@ -34,5 +36,18 @@ def arc(t, r, angle):
     polyline(t, n, step_length, step_angle)
     t.rt(step_angle/2)
 
-arc(tt, 300, 90)
+def leave(t, r, angle):
+    """Draws a leave using:
+
+    t: turtle
+    r: radius
+    angle: angle between arcs
+    """
+    for i in range(2):
+        arc(t, r, angle)
+        t.lt(180 - angle)
+
+leave(tt, 200, 30)
+
+# next step build actual flower, also incorporate circle in the middle
 turtle.mainloop()
