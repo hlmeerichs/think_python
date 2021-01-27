@@ -2,6 +2,7 @@ import turtle
 import math
 
 turtle.Turtle().speed("fastest")
+turtle.tracer(0, 0)
 
 t = turtle.Turtle()
 tt = turtle.Turtle()
@@ -59,8 +60,8 @@ def flower(t, n, r, angle):
         t.lt(360 / n)
 
 flower(tt, 18, 200, 90)
+flower(t, 12, 70, 60)
 
 # next step add circle in the center, figure out overlapping
+turtle.update()
 turtle.mainloop()
-
-
