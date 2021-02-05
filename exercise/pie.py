@@ -21,6 +21,7 @@ def pie(t, n, length):
         triangle(t, length)
         t.lt(360 / n)
 
+triangle(t, 50)
 pie(t, 5, 60)
 
 
