@@ -2,6 +2,7 @@ import turtle
 import math
 
 # idea is to change flower function to use triangles instead of leaves
+# math behind this: the inner angle of each triangle summed up needs to be 360
 
 t = turtle.Turtle()
 
@@ -17,12 +18,11 @@ def triangle(t, length):
         t.lt(120)
 
 def pie(t, n, length):
-    for i in range(n):
+    p = n * 2
+    for i in range(p):
         triangle(t, length)
-        t.lt(360 / n)
+        t.lt(360 / p)
 
-triangle(t, 50)
-pie(t, 5, 60)
-
+pie(t, 3, 60)
 
 turtle.mainloop()
