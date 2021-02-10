@@ -1,1 +1,3 @@
-# think_python
+# todos
+
+add close editor tab

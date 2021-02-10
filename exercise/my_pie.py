@@ -8,6 +8,13 @@ t = turtle.Turtle()
 
 
 def polygon(t, length, n):
+    """[summary]
+
+    Args:
+        t ([type]): [description]
+        length ([type]): [description]
+        n ([type]): [description]
+    """    
     angle = 360 / n
     for y in range(n):
         t.backward(length)
