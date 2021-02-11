@@ -45,7 +45,4 @@ def arc(t, r, angle):
 def draw_o():
     arc(t, 10, 360)    
     
-draw_o()
-
-
 turtle.mainloop()

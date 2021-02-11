@@ -10,21 +10,7 @@ from __future__ import print_function, division
 
 import string
 import turtle
-
-"""
-To use this typewriter, you have to provide a module named letters.py
-that contains functions with names like draw_a, draw_b, etc.
-"""
-
-# check if the reader has provided letters.py
-try:
-    import letters
-except ImportError as e:
-    message = e.args[0]
-    if message.startswith('No module'):
-        raise ImportError(message + 
-                          '\nYou have to provide a module named letters.py')
-
+import letters 
 
 def teleport(t, x, y):
     """Moves the turtle without drawing a line.
